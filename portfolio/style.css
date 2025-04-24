@@ -1,0 +1,284 @@
+:root {
+    --main-bg: #fddad8;
+    --text-dark: #1a1a1a;
+    --accent: #ff4d4d;
+    --secondary: #fe8888;
+    --light-color: #f8f8f8; 
+}
+
+* {
+    margin: 0;                
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Infant', serif;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    background-color: var(--main-bg);
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Infant', serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section__title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.section__title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent);
+    margin: 15px auto;
+}
+
+.header {
+    background-color: var(--dark-color);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 30px 0;
+}
+
+.name-tag h1 {
+    font-size: 4rem;
+    line-height: 0.9;
+    margin: 0; 
+    text-transform: uppercase;
+}
+
+.line {
+    font-family: 'Flow Circular', cursive;
+    color: var(--secondary);
+    margin-top: 0.5rem;
+}
+
+.header__subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav__link {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 5px 10px; 
+}
+
+.nav__link:hover {
+    background-color: var(--accent);
+}
+
+.aboutme__content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.aboutme__text {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.aboutme__text p {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+.aboutme__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme__photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.aboutme__photo:hover {
+    transform: scale(1.03);
+}
+
+.projects__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.project-card {
+    border: 1px solid var(--text-dark);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background: var(--text-dark);
+    color: var(--main-bg);
+}
+
+.project-card__title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.project-card__description {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.skills__content {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.skills__column {
+    flex: 1;
+    max-width: 400px;
+}
+
+.skills__subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills__list {
+    list-style: none;
+}
+
+.skills__item {
+    background-color: white;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.skills__item:hover {
+    transform: translateX(5px);
+    background: var(--text-dark);
+    color: var(--main-bg);
+}
+
+.footer {
+    background-color: var(--light-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+}
+
+.footer__text {
+    margin-bottom: 10px;
+}
+
+.year {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: (--accent);
+}
+
+.line_in_bottom {
+    font-family: 'Flow Circular', cursive;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1.1rem;
+    }
+    
+    .aboutme__content {
+        flex-direction: column-reverse;
+    }
+    
+    .aboutme__text p {
+        font-size: 1.2rem;
+    }
+    
+    .skills__content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav__list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .aboutme__text {
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+    }
+    
+    .name-tag h1 {
+        font-size: 3rem;
+    }
+}
